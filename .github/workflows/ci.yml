@@ -22,4 +22,6 @@ jobs:
         run: echo "CI Pipeline Running Successfully!"
               - name: Step 4 – Show date
         run: date
+    - name: Step 4 - Build Docker Image
+      run: docker build -t myapp:latest .
 
