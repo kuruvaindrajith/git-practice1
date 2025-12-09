@@ -1,12 +1,22 @@
-steps:
-  - name: Checkout code
-    uses: actions/checkout@v3
+name: Simple CI Pipeline
 
-  - name: Step 1 - Show current directory
-    run: pwd
+on:
+  push:
+    branches: [ master ]
 
-  - name: Step 2 - List files
-    run: ls -al
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
-  - name: Step 3 - Print custom message
-    run: echo "CI Pipeline Running Successfully!"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Step 1 - Show current directory
+        run: pwd
+
+      - name: Step 2 - List files
+        run: ls -al
+
+      - name: Step 3 - Print custom message
+        run: echo "CI Pipeline Running Successfully!"
