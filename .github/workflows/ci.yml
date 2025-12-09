@@ -20,8 +20,6 @@ jobs:
 
       - name: Step 3 - Print custom message
         run: echo "CI Pipeline Running Successfully!"
-              - name: Step 4 – Show date
-        run: date
-    - name: Step 4 - Build Docker Image
-      run: docker build -t myapp:latest .
 
+      - name: Step 4 - Build Docker Image
+        run: docker build -t myapp:latest .
